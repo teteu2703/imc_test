@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de IMC</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Faça o teste e calcule seu IMC</h1>
+        <form method="POST">
+            Nome: <input type="text" name="name" required><br>
+            Peso (kg): <input type="number" name="weight" step="0.1" required><br>
+            Altura (m): <input type="number" name="height" step="0.1" required><br>
+            <button type="submit">Calcular</button>
+        </form>
+        <a href="/history">Ver histórico</a>
+    </div>
+</body>
+</html>
