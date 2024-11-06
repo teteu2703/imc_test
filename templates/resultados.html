@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados IMC</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Resultados de IMC</h1>
+    <table border="1">
+        <tr>
+            <th>Nome</th>
+            <th>Peso (kg)</th>
+            <th>Altura (m)</th>
+            <th>IMC</th>
+            <th>Status</th>
+        </tr>
+        {% for registro in registros %}
+        <tr>
+            <td>{{ registro[0] }}</td>
+            <td>{{ registro[1] }}</td>
+            <td>{{ registro[2] }}</td>
+            <td>{{ "%.2f"|format(registro[3]) }}</td>
+            <td>{{ registro[4] }}</td>
+        </tr>
+    </table>
+    <a href="/">Voltar</a>
+</body>
+</html>
