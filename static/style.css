@@ -1,86 +1,80 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #ae00ff;
-    color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    font-family: "Bebas Neue", sans-serif;
     margin: 0;
+    padding: 0;
+    background-color: #fde300;
+    color: #ff6300;
 }
 
-.container {
-    width: 80%;
-    max-width: 600px;
-    background-color: #148fad;
+header {
+    background-color: #fde300;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-}
-
-h1 {
-    color: #00c3ff;
-    margin-bottom: 20px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-input[type="text"],
-input[type="number"],
-button {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #0f6080;
-    font-size: 16px;
-}
-
-button {
-    background-color: #00c3ff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #00c3ff;
-}
-
-a {
-    color: #00c3ff;
-    text-decoration: none;
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-table, th, td {
-    border: 1px solid #ddd;
-}
-
-th, td {
-    padding: 10px;
-    text-align: center;
-}
-
-th {
-    background-color: #00c3ff;
     color: white;
 }
 
-td {
-    background-color: #f9f9f9;
+.logo {
+    width: 350px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+header h1 {
+    display: inline;
+    font-size: 2em;
+}
+
+.intro {
+    padding: 50px;
+    text-align: center;
+    font-size: 1.9em;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgb(247, 161, 161);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+form input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #ff6300;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #d80b0b;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+form button:hover {
+    background-color: #d80b0b;
+}
+
+.result {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #ff8484;
+    border: 1px solid #c53b3b;
+    border-radius: 4px;
+    text-align: center;
 }

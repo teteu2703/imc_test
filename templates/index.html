@@ -5,8 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teste de IMC</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
 </head>
 <body>
+    <header>
+        <img src="{{ url_for('static', filename='IMC.png') }}" alt="" alt="Logotipo" class="logo">
+    </header>
+
+    <section class="intro">
+        <h2>Bem-vindo ao Teste de IMC!</h2>
+        <p>
+            Criado no século 19 pelo matemático Lambert Quételet, o Índice de Massa Corporal, conhecido pela 
+            sigla IMC, é um cálculo simples que permite medir se alguém está ou não com o peso ideal. Muitas pessoas buscam 
+            descobrir seu IMC quando iniciam uma dieta específica ou uma atividade física.
+
+            Se você é uma dessas pessoas que quer saber seu IMC,Aqui você pode calcular seu Índice de Massa Corporal e 
+            descobrir se está dentro do peso ideal. Preencha os campos abaixo com seu nome, peso e altura, e veja seu resultado imediatamente.
+        </p>
+    </section>
+
     <div class="container">
         <h1>Faça o teste e calcule seu IMC</h1>
         <form action="/" method="post">
