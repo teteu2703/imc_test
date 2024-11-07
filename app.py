@@ -14,7 +14,7 @@ class UserIMC(db.Model):
     imc = db.Column(db.Float, nullable=False)
     status = db.Column(db.String(20), nullable=False)
 
-def create_db():
+with app.app_context():
     db.create_all()
 
 @app.route('/', methods=['GET', 'POST'])
@@ -52,11 +52,10 @@ def index():
             return "Erro: Campos não preenchidos corretamente."
     return render_template('index.html')
 
-app.route('/results')
-def resultados():
+@app.route('/results')
+def results():
     imc_records = UserIMC.query.all()
     return render_template('results.html', imc_records=imc_records)
 
 if __name__ == '__main__':
-    create_db()
     app.run(port=5000, debug=True)

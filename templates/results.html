@@ -16,13 +16,13 @@
             <th>IMC</th>
             <th>Status</th>
         </tr>
-        {% for registro in registros %}
+        {% for registro in imc_records %}
         <tr>
-            <td>{{ registro[0] }}</td>
-            <td>{{ registro[1] }}</td>
-            <td>{{ registro[2] }}</td>
-            <td>{{ "%.2f"|format(registro[3]) }}</td>
-            <td>{{ registro[4] }}</td>
+            <td>{{ registro['name'] }}</td>
+            <td>{{ registro['weight'] }}</td>
+            <td>{{ registro['height'] }}</td>
+            <td>{{ "%.2f"|format(registro['imc']) }}</td>
+            <td>{{ registro['status'] }}</td>
         </tr>
         {% endfor %}
     </table>
